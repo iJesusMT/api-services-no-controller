@@ -11,7 +11,6 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 var app = builder.Build();
 
-
 app.MapGet("/servicios/productos", async (DataContext context) =>
 {
     var productos = await context.Productos.ToListAsync();
